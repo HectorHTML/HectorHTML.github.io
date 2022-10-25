@@ -1,0 +1,60 @@
+<body>
+  <h1>¿Rubí mi amorcito me perdonas?</h1>
+  <a href="#" class="button" id="si">SI</a>
+  <a href="#" class="button" id="no">NO</a>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 50vh;
+  height: 50vh;
+  display: flex;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: auto;
+  margin-top: 200px;
+  margin-left: 25px;
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  padding: 20px 35px;
+  font-size: 20px;
+}
+#si {
+  left: 20%;
+  transform: translateY(-50%) translateX(-20%);
+}
+
+#no {
+  left: 80%;
+  transform: translateY(-50%) translateX(-80%);
+}
+let si = document.getElementById("si");
+
+si.addEventListener("click", function (e) {
+  swal({
+    title: "Sabia que me perdonarias...•♥️• te amo :3",
+    icon: "success"
+  });
+});
+let no = document.getElementById("no");
+
+no.addEventListener("mousemove", function (e) {
+  let x = Math.round(Math.random() * 93);
+  let y = Math.round(Math.random() * 93);
+  no.style.left = x + "%";
+  no.style.top = y + "%";
+});
